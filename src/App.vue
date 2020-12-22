@@ -42,7 +42,7 @@ export default {
         data.value[i].total = 20;
       } else if (i + 1 === 18) {
         data.value[i].total = 10;
-      } else if (i + i === 17) {
+      } else if (i + 1 === 17) {
         data.value[i].total = 5;
       } else if (i + 1 >= 2 && i + 1 <= 16) {
         data.value[i].total = 1;
