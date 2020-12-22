@@ -24,73 +24,31 @@ export default {
   setup() {
     const prizeTotal = ref(0);
     const outputPrize = ref(null);
-    const data = ref([
-      {
-        value: 1, total: 5,
-      },
-      {
-        value: 1, total: 5,
-      },
-      {
-        value: 1, total: 5,
-      },
-      {
-        value: 1, total: 4,
-      },
-      {
-        value: 1, total: 1,
-      },
-      {
-        value: 1, total: 5,
-      },
-      {
-        value: 1, total: 5,
-      },
-      {
-        value: 1, total: 5,
-      },
-      {
-        value: 1, total: 5,
-      },
-      {
-        value: 1, total: 4,
-      },
-      {
-        value: 1, total: 1,
-      },
-      {
-        value: 1, total: 5,
-      },
-      {
-        value: 1, total: 5,
-      },
-      {
-        value: 1, total: 5,
-      },
-      {
-        value: 1, total: 5,
-      },
-      {
-        value: 1, total: 4,
-      },
-      {
-        value: 1, total: 1,
-      },
-      {
-        value: 1, total: 5,
-      },
-      {
-        value: 1, total: 1,
-      },
-      {
-        value: 1, total: 5,
-      },
-    ]);
+    const data = ref([]);
     const gotResult = ref(false);
     let isSpinng = false;
+    data.value.length = 20;
 
     for (let i = 0; i < data.value.length; i += 1) {
+      data.value[i] = {};
+    }
+
+    for (let i = 0; i < 20; i += 1) {
       data.value[i].name = i + 1;
+      data.value[i].value = 1;
+      if (i + 1 === 20) {
+        data.value[i].total = 69;
+      } else if (i + 1 === 19) {
+        data.value[i].total = 20;
+      } else if (i + 1 === 18) {
+        data.value[i].total = 10;
+      } else if (i + i === 17) {
+        data.value[i].total = 5;
+      } else if (i + 1 >= 2 && i + 1 <= 16) {
+        data.value[i].total = 1;
+      } else if (i + 1 === 1) {
+        data.value[i].total = 1;
+      }
     }
 
     onMounted(() => {
